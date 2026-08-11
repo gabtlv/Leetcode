@@ -8,9 +8,8 @@ class Solution:
         # base case if theres only 1 element
         if len(nums) == 1:
             return [nums.copy()]
-
+        
         for i in range(len(nums)):
-            
             initial = nums.pop(0)
             perms = self.permute(nums)
 
@@ -18,5 +17,5 @@ class Solution:
                 perm.append(initial)
             result.extend(perms)
             nums.append(initial)
-        return result
         
+        return result
