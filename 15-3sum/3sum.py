@@ -1,11 +1,11 @@
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         
-        nums.sort()
-        result = []
+        nums.sort() # sort the array
+        result = [] # where your results go
         target = 0
         for i in range(len(nums)):
-            if nums[i] > 0:
+            if nums[i] > 0: # if the first number is positive, immediately stop because the array is sorted an all numbers are positive
                 break
             if i > 0 and nums[i] == nums[i-1]:
                 continue
