@@ -1,9 +1,9 @@
-class Solution(object):
-    def twoSum(self, nums, target):
-        checked = {}
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        seen = {}
+
         for i in range(len(nums)):
             remainder = target - nums[i]
-            if remainder in checked:
-                return [checked[remainder], i]
-            checked[nums[i]] = i
-        
+            if remainder in seen:    
+                return [seen[remainder], i]
+            seen[nums[i]] = i
