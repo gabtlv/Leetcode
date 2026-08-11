@@ -17,5 +17,4 @@ class Solution:
                 perm.append(initial)
             result.extend(perms)
             nums.append(initial)
-        
-        return result
+        return result    
